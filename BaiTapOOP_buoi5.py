@@ -34,7 +34,6 @@
 
 # print()
 
-# Thêm thuộc tính màu và phương thức(hành động) thay đổi màu
 from abc import ABC, abstractmethod
 class Employee(ABC):
     def __init__(self, id, name, salary):
@@ -87,7 +86,7 @@ class Manager(Employee):
         print(f"==> Tổng lương: {self.calculate_salary():,.0f} VNĐ")
         print("-" * 30)
 
-# Test chương trình
+# Test 
 if __name__ == "__main__":
     dev = Developer("D01", "Hoàng", 15000, "Python", 10)
     mgr = Manager("M01", "Lan", 20000, 5000)

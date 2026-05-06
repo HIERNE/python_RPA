@@ -9,9 +9,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-SENDER_EMAIL = "datpro937@gmail.com"
-APP_PASSWORD = "xmza vjgy zxtk pfgb"
-RECEIVER_EMAIL = "datpro973@gmail.com"
+SENDER_EMAIL = "vominhhien1732005@gmail.com"
+APP_PASSWORD = "rcls zipx exyv qzgk"
+RECEIVER_EMAIL = "hienvo17305@gmail.com"
 
 def gui_email_canh_bao(bien_so, thoi_gian, dia_diem, loi):
     """Hàm gửi email thông báo khi có vi phạm phạt nguội"""

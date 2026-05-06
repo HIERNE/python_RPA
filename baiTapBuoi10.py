@@ -47,7 +47,7 @@ try:
     danh_sach_xe = df['BienSo'].dropna().tolist()
 except FileNotFoundError:
     print("Không tìm thấy file Excel, sử dụng danh sách mẫu...")
-    danh_sach_xe = ["51F-777.77", "30A-12345", "43A-99999"]
+    danh_sach_xe = ["51F-777.77", "43D1-47792", "43A-99999"]
 
 print(f"Bắt đầu kiểm tra {len(danh_sach_xe)} biển số...\n")
 

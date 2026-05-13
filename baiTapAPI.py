@@ -89,8 +89,8 @@ def reviewOrder():
     comment_area.send_keys("Bot mua hàng tự động.")
 
 def placeOrder():
-    btn_place = driver.find_element(By.CSS_SELECTOR, "a[href='/payment']")
-    btn_place.click()
+    btn_place = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "a[href='/payment']")))
+    driver.execute_script("arguments[0].click();", btn_place)
 
 def fillInformation():
     wait.until(EC.presence_of_element_located((By.NAME, "name_on_card"))).send_keys("Minh Hien")
@@ -100,7 +100,8 @@ def fillInformation():
     driver.find_element(By.NAME, "expiry_year").send_keys("2026")
 
 def confirm():
-    driver.find_element(By.ID, "submit").click()
+    btn_submit = wait.until(EC.presence_of_element_located((By.ID, "submit")))
+    driver.execute_script("arguments[0].click();", btn_submit)
     print("--- Đặt hàng thành công! ---")
 
 def send_email_notification():

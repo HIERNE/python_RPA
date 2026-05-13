@@ -53,14 +53,14 @@ def sanPhamGiaMIN(danh_sach):
     low_product = min(danh_sach, key=lambda x: x[1])
     return low_product  
 
-def clearCart():
-    driver.get('https://www.automationexercise.com/view_cart')
-    delete_buttons = driver.find_elements(By.CSS_SELECTOR, "a.cart_quantity_delete")
-    for btn in delete_buttons:
-        try:
-            btn.click()
-            time.sleep(0.5)
-        except: pass
+# def clearCart():
+#     driver.get('https://www.automationexercise.com/view_cart')
+#     delete_buttons = driver.find_elements(By.CSS_SELECTOR, "a.cart_quantity_delete")
+#     for btn in delete_buttons:
+#         try:
+#             btn.click()
+#             time.sleep(0.5)
+#         except: pass
 
 
 def addToCart(product_tuple):
@@ -128,7 +128,7 @@ def send_email_notification():
 #THỰC THI FLOW
 try:
     loginForm()
-    clearCart()
+    # clearCart()
     intoProduct()
     timKiem_Shirt()
     ds = locSanPhamTrangDau()

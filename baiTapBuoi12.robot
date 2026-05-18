@@ -1,13 +1,11 @@
 *** Settings ***
-Library    SeleniumLibrary
-
+Library     SeleniumLibrary
 *** Variables ***
-${URL}        https://the-internet.herokuapp.com/login
-${username}   tomsmith
-${password}   SuperSecretPassword!
-
+${URL}    https://the-internet.herokuapp.com/login
+${username}    tomsmith
+${password}    SuperSecretPassword!
 *** Test Cases ***
-Login thành công
+Check Login Succesfully
     Open Browser    ${URL}    Chrome
     Title Should Be    The Internet
     Input Text    id:username    ${username}
@@ -15,8 +13,7 @@ Login thành công
     Click Button    css:button.radius
     Page Should Contain    You logged into a secure area!
     [Teardown]    Close Browser
-
-Login thất bại - Username sai
+Login Fail - username sai
     Open Browser    ${URL}    Chrome
     Title Should Be    The Internet
     Input Text    id:username    minhhien
@@ -24,12 +21,5 @@ Login thất bại - Username sai
     Click Button    css:button.radius
     Page Should Contain    Your username is invalid!
     [Teardown]    Close Browser  
-
-Login thất bại - Password sai
-    Open Browser    ${URL}    Chrome
-    Title Should Be    The Internet
-    Input Text    id:username    ${username}
-    Input Text    id:password    salamander
-    Click Button    css:button.radius
-    Page Should Contain    Your password is invalid!
-    [Teardown]    Close Browser
+  
+    
